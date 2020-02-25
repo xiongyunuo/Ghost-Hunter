@@ -1,0 +1,27 @@
+{
+	"manifest_version" : 2,
+	"name" : "Ghost Hunter",
+	"description" : "Extension to mass hunt ghosts",
+	"version" : "1.0",
+	"browser_action" : {
+		"default_title" : "Ghost Hunter",
+		"default_icon" : "icon.png",
+		"default_popup" : "popup.html"
+	},
+	"icons" : {
+		"16" : "icon16.png",
+		"48" : "icon48.png",
+		"128" : "icon128.png"
+  },
+  "background" : {
+    "scripts" : ["event_script.js"],
+    "persistent" : false
+  },
+  "permissions" : ["tabs", "https://*/*", "http://*/*"],
+  "commands" : {
+		"stop killing" : {
+			"suggested_key" : {"default" : "Alt+Shift+1"},
+			"description" : "Stop killing"
+		}
+	}
+}
